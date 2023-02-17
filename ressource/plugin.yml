@@ -1,0 +1,27 @@
+name: JikayLobby
+version: 0.3
+author: Misteryy
+main: fr.misteryy.lobby.main
+commands:
+  discordcommands:
+    description: permet d'envoyer le discord
+    aliases: [dc, discord]
+  spawn:
+    description: permet de se tp au spawn
+    aliases: [sp, lobby, hub]
+  twittercommands:
+    description: permet d'envoyer le twitter
+    aliases: [twitter, twt]
+  Youtubecommands:
+    description: permet d'envoyer le youtube
+    aliases: [youtube, ytb]
+  DocCommands:
+    description: permet d'envoyer le doc
+    aliases: [doc]
+  stafflist:
+    description: permet de voir les staff de connecter
+    aliases: [staff,stflist,stfl]
+  fly:
+    description: permet de fly
+  unfly:
+    description: permet de désactiver le fly
