@@ -25,7 +25,7 @@ public class PlayerJoinListener implements Listener {
         }
         player.setHealth(20);
         player.setFoodLevel(20);
-        e.setJoinMessage("§a» " + player.getName());
+        e.setJoinMessage("§a» §7" + player.getName());
         player.teleport(new Location(Bukkit.getWorld("world"),216,64,85));
         player.playSound(player.getLocation(), Sound.ORB_PICKUP,1,1);
         player.sendMessage("§8");
@@ -37,7 +37,7 @@ public class PlayerJoinListener implements Listener {
         player.sendMessage(" §l| §fYoutube : ");
         player.sendMessage("§l");
         player.setWalkSpeed(0.35F);
-        player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION,10000000,255, true));
+        player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION,100000,255, true));
         player.getInventory().clear();
     }
     @EventHandler
