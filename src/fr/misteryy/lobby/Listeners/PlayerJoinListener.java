@@ -20,25 +20,24 @@ public class PlayerJoinListener implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent e){
         Player player = e.getPlayer();
-        if (!ScoreboardManager.scoreboardGame.containsKey(player)) {
+        if(!ScoreboardManager.scoreboardGame.containsKey(player)){
             new ScoreboardManager(player).loadScoreboard();
         }
         player.setHealth(20);
         player.setFoodLevel(20);
         e.setJoinMessage("§a» " + player.getName());
-        player.teleport(new Location(Bukkit.getWorld("world"), 216, 64, 85));
+        player.teleport(new Location(Bukkit.getWorld("world"),216,64,85));
         player.playSound(player.getLocation(), Sound.ORB_PICKUP,1,1);
         player.sendMessage("§8");
         player.sendMessage(" §l» Bienvenue sur §d§lLobby §f!");
         player.sendMessage(" §l• ...");
         player.sendMessage("§f");
-        player.sendMessage(" §l| §fDiscord : " );
+        player.sendMessage("§l| §fDiscord : ");
         player.sendMessage(" §l| §fTwitter : ");
         player.sendMessage(" §l| §fYoutube : ");
         player.sendMessage("§l");
         player.setWalkSpeed(0.35F);
-        player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION,1000000000,255, true));
-        player.setNoDamageTicks(Integer.MAX_VALUE);
+        player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION,10000000,255, true));
         player.getInventory().clear();
     }
     @EventHandler

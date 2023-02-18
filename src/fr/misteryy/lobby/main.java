@@ -20,9 +20,9 @@ public class main extends JavaPlugin{
             getCommand("stafflist").setExecutor(new stafflist(this));
             getCommand("fly").setExecutor(new Fly(this));
             getCommand("unfly").setExecutor(new Fly(this));
+            getServer().getPluginManager().registerEvents(new PlayerJoinListener(),this);
             getServer().getPluginManager().registerEvents(new menu(),this);
             getServer().getPluginManager().registerEvents(new Weather(), this);
-            getServer().getPluginManager().registerEvents(new PlayerJoinListener(),this);
             Runnable runnable = new Runnable();
             runnable.runTaskTimer(this, 0,20);
         }
@@ -30,7 +30,7 @@ public class main extends JavaPlugin{
         @Override
         public void onDisable() {
         }
-        public static fr.misteryy.lobby.main getInstance(){
+        public static main getInstance(){
             return instance;
         }
     }
